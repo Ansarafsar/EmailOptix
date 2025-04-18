@@ -1,0 +1,19 @@
+
+Recommendations for Email Campaign Optimization
+1. Prioritize High-Value Segments:
+   - Target 'High' click segment (highest CTR, likely loyal buyers in key countries).
+   - Focus on users with 6-10 or 11+ past purchases (highest CTR per purchase_bin).
+2. Optimize Email Content:
+   - Use short_email (likely higher CTR than long_email).
+   - Personalize emails (personalized outperforms generic per EDA).
+3. Optimize Send Timing:
+   - Send emails in Morning (6-12) on Tuesday/Wednesday (highest CTR per EDA).
+4. Test New Strategies:
+   - Experiment with hyper-personalized content (e.g., product recommendations).
+   - Test evening sends for specific countries (e.g., UK, if Evening CTR is high).
+5. Implement Model:
+   - Use model to select top 20% of users by predicted click probability (per Phase 4).
+   - Expect ~40-90% CTR lift (e.g., 2.12% to 3-4%).
+6. Monitor and Iterate:
+   - Run A/B test (per Phase 4) to validate model-driven targeting.
+   - Retrain model monthly with new campaign data.

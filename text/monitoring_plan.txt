@@ -1,0 +1,11 @@
+
+Monitoring Plan for Email Campaign Model
+Objective: Ensure model maintains high CTR and adapts to new data.
+Methodology:
+- Track CTR Weekly: Compare actual CTR (# clicks / # emails sent) to predicted CTR (~3-4% per Phase 4).
+- Log Predictions: Save pred_proba and actual clicks in a database (e.g., CSV or SQLite).
+- Evaluate Drift: Check feature distributions (e.g., user_past_purchases) monthly for shifts.
+- Retrain Model: Update model monthly with new campaign data (re-run Phase 3 script).
+- Alert Thresholds: Flag if CTR drops below 2.5% or feature drift exceeds 10% (e.g., mean purchases shifts).
+Tools: Python, Pandas, SQLite for logging, Streamlit for dashboards.
+Timeline: Weekly CTR reports, monthly retraining.

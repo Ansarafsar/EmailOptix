@@ -1,0 +1,13 @@
+
+A/B Test Plan for Model Validation
+Objective: Compare model-driven email targeting vs. random targeting to validate CTR improvement.
+Methodology:
+- Group A (Control): Randomly select 10,000 users and send emails (current approach).
+- Group B (Test): Use model to select 10,000 users with highest predicted click probabilities.
+- Email Content: Use same email version (e.g., short_email, personalized) for both groups.
+- Timing: Send emails at same time (e.g., 10 AM Tuesday, per EDA).
+- Duration: Run for 1-2 weeks to collect sufficient click data.
+- Metric: Measure CTR (# clicks / # emails sent) for both groups.
+- Statistical Test: Use two-sample t-test to compare CTRs (significance level: 0.05).
+Expected Outcome: Group B should show higher CTR (e.g., 3-4% vs. 2.12%).
+Risks: Ensure groups are balanced (e.g., similar user_country distribution).

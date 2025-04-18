@@ -38,117 +38,50 @@ pip install pandas numpy scikit-learn matplotlib seaborn streamlit pyngrok jobli
 ---
 ## Outputs:
 
-- ***Data**: data/output/ (e.g., targeted_users.csv, high_prob_users.csv).
+- **Data**: data/output/ (e.g., targeted_users.csv, high_prob_users.csv).
+- **Model**: models/click_prediction_model.pkl.
+- **Visuals**: images/ (e.g., ctr_by_segment.png).
+- **Text**: text/ (e.g., monitoring_plan.txt, slides.txt).
 
+---
 
+## 🔍 Key Features
 
-Model: models/click_prediction_model.pkl.
+- **Feature Engineering**: Binned user_past_purchases into purchase_bin (‘0’, ‘1-2’, ‘3-5’, ‘6-10’, ‘11+’) and hour into hour_bin (‘Night’, ‘Morning’, etc.) for robust modeling.
+- **Model**: Random Forest with label-encoded categories, handling low probabilities (~0.0294) via a low threshold (0.02).
+- **Deployment**: score_users pipeline generates targeted_users.csv for high-probability users, deployed via Streamlit.
+- **Segmentation**: Identified high-CTR segments (e.g., 4–6% CTR for ‘6-10’ purchase users, US/UK, personalized emails).
+- **Monitoring**: Plan to track CTR, detect feature drift, and retrain monthly.
+---
 
+## 📈 Results
 
+- **Open Rate**: ~10.35% (Phase 2).
+- **CTR**: ~2.12% baseline, ~3–4% for targeted users (Phase 4).
+- **CTR Lit**: ~40–90% by targeting top users (Phase 4).
+- **Segments**: Loyal buyers (‘6-10’, ‘11+’ purchases), US/UK, and morning sends drive high CTR (Phase 5).
+- **Deliverables**: PowerPoint slides, Streamlit app, and monitoring plan for VP-level presentation.
 
-Visuals: images/ (e.g., ctr_by_segment.png).
+---
 
-
-
-Text: text/ (e.g., monitoring_plan.txt, slides.txt).
-
-
-
-🔍 Key Features
-
-
-
-
-
-Feature Engineering: Binned user_past_purchases into purchase_bin (‘0’, ‘1-2’, ‘3-5’, ‘6-10’, ‘11+’) and hour into hour_bin (‘Night’, ‘Morning’, etc.) for robust modeling.
-
-
-
-Model: Random Forest with label-encoded categories, handling low probabilities (~0.0294) via a low threshold (0.02).
-
-
-
-Deployment: score_users pipeline generates targeted_users.csv for high-probability users, deployed via Streamlit.
-
-
-
-Segmentation: Identified high-CTR segments (e.g., 4–6% CTR for ‘6-10’ purchase users, US/UK, personalized emails).
-
-
-
-Monitoring: Plan to track CTR, detect feature drift, and retrain monthly.
-
-
-
-📈 Results
-
-
-
-
-
-Open Rate: ~10.35% (Phase 2).
-
-
-
-CTR: ~2.12% baseline, ~3–4% for targeted users (Phase 4).
-
-
-
-CTR Lift: ~40–90% by targeting top users (Phase 4).
-
-
-
-Segments: Loyal buyers (‘6-10’, ‘11+’ purchases), US/UK, and morning sends drive high CTR (Phase 5).
-
-
-
-Deliverables: PowerPoint slides, Streamlit app, and monitoring plan for VP-level presentation.
-
-
-
-🛠️ Challenges & Solutions
-
-
-
-
+## 🛠️ Challenges & Solutions
 
 Low Probabilities (~0.0294): Adjusted threshold to 0.02 and used top 10% filtering to target users effectively.
-
-
-
 Imbalanced Data: Leveraged Random Forest and focused on high-CTR segments to maximize lift.
-
-
-
 Deployment: Used Ngrok for Streamlit access, with robust error handling in score_users.
 
-
-
-📝 License
+---
+## 📝 License
 
 This project is licensed under the MIT License. See LICENSE for details.
 
+## 🙌 Acknowledgments
 
+- Built as a case study to optimize email campaigns.
+- Inspired by real-world marketing analytics challenges.
+- **Tools**: Python, Pandas, Scikit-learn, Streamlit, Ngrok.
 
-🙌 Acknowledgments
-
-
-
-
-
-Built as a case study to optimize email campaigns.
-
-
-
-Inspired by real-world marketing analytics challenges.
-
-
-
-Tools: Python, Pandas, Scikit-learn, Streamlit, Ngrok.
-
-
-
-📫 Contact
+## 📫 Contact
 
 Connect with me on LinkedIn or GitHub for collabs or inquiries!
 

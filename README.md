@@ -38,10 +38,11 @@ pip install pandas numpy scikit-learn matplotlib seaborn streamlit pyngrok jobli
 ---
 ## Outputs:
 
-- **Data**: data/output/ (e.g., targeted_users.csv, high_prob_users.csv).
+- **Data**: data/output/  and data/input (e.g., targeted_users.csv, high_prob_users.csv).
 - **Model**: models/click_prediction_model.pkl.
 - **Visuals**: images/ (e.g., ctr_by_segment.png).
 - **Text**: text/ (e.g., monitoring_plan.txt, slides.txt).
+- **app.py**: Streamlit App code.
 
 ---
 

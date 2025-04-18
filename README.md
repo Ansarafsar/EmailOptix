@@ -36,13 +36,9 @@ cd EmailOptix
 pip install pandas numpy scikit-learn matplotlib seaborn streamlit pyngrok joblib
 ```
 ---
-Outputs:
+## Outputs:
 
-
-
-
-
-Data: data/output/ (e.g., targeted_users.csv, high_prob_users.csv).
+- ***Data**: data/output/ (e.g., targeted_users.csv, high_prob_users.csv).
 
 
 
